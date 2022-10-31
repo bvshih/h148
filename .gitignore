@@ -1,3 +1,4 @@
 /batchjobs/script_outs/
 *.pyc
 *.pyo
+*.db-journal
