@@ -3,13 +3,13 @@
 #More properties for h148 run in parallel 
 #----------------------------------------------------
 #SBATCH -J h148_db_5                                # Job name
-#SBATCH -o ./script_outs/outs/h148_db_5.o%j         # Name of stdout output file
-#SBATCH -e ./script_outs/errors/h148_db_5.e%j       # Name of stderr error file
+#SBATCH -o ./script_outs/h148_db/h148_db_5.o%j         # Name of stdout output file
+#SBATCH -e ./script_outs/h148_db/h148_db_5.e%j       # Name of stderr error file
 #SBATCH -p skx-normal                                 # Queue (partition) name
 #SBATCH -N 1                                        # Total # of nodes 
 #SBATCH -n 32                                        # Total # of mpi tasks 
 #SBATCH -t 48:00:00                                 # Run time (hh:mm:ss)
-#SBATCH --mail-user=bshih0@uw.edu
+#SBATCH --mail-user=bv.shih@gmail.com
 #SBATCH --mail-type=all                             # Send email at begin and end of job
 
 # Other commands must follow all #SBATCH directives...
