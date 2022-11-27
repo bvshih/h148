@@ -1,14 +1,14 @@
 #!/bin/bash
 #----------------------------------------------------
-#Imports AHF-defined properties for h148
+#Removing duplicate properties from database
 #----------------------------------------------------
-#SBATCH -J h148_db_6                                # Job name
-#SBATCH -o ./script_outs/h148_db/h148_db_6/%j.o     # Name of stdout output file
-#SBATCH -e ./script_outs/h148_db/h148_db_6/%j.e     # Name of stderr error file
+#SBATCH -J h148_db_clean                                # Job name
+#SBATCH -o ./script_outs/h148_db/h148_clean/%j.o     # Name of stdout output file
+#SBATCH -e ./script_outs/h148_db/h148_clean/%j.e     # Name of stderr error file
 #SBATCH -p normal                                   # Queue (partition) name
 #SBATCH -N 1                                        # Total # of nodes (must be 1 for serial)
 #SBATCH -n 1                                        # Total # of mpi tasks (should be 1 for serial)
-#SBATCH -t 05:00:00                                 # Run time (hh:mm:ss)
+#SBATCH -t 10:00:00                                 # Run time (hh:mm:ss)
 #SBATCH --mail-user=bv.shih@gmail.com
 #SBATCH --mail-type=all                             # Send email at begin and end of job
 
@@ -23,6 +23,6 @@ echo $TANGOS_DB_CONNECTION
 
 # Launch serial code...
 
-tangos import-properties Vmax --for h148.cosmo50PLKvdXsec.6144.VTS
+tangos remove-duplicates
 
 # ---------------------------------------------------
