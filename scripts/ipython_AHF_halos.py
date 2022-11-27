@@ -63,28 +63,27 @@ for i in range(4):
 
 print('\n')
 
-for i in range(4):
-    print(f'h{i+1}: ')
-    print(AHF_list[i])
-    print(com_list[i])
-    print(ssc_list[i])
-    print('\n')
+# for i in range(1,4):
+#     print(f'h{i+1}: ')
+#     print(AHF_list[i])
+#     print(com_list[i])
+#     print(ssc_list[i])
+#     print('\n')
 # -------------------------------------------------------------------------------------
 
-print('\n')
 print('distances:')
 
-for i in range(3):
+for i in range(1,4):
 
-    dist = [calc_distance(*AHF_list[0], *AHF_list[i]), calc_distance(*AHF_list[0], *AHF_list[i]), calc_distance(*AHF_list[0], *AHF_list[i])]
+    dist = [calc_distance(*AHF_list[0], *AHF_list[i]), calc_distance(*com_list[0], *com_list[i]), calc_distance(*ssc_list[0], *ssc_list[i])]
     print(f'h1 and h{i+1}')
-    print('AHF: ', dist[0])
-    print('COM: ', dist[1])
-    print('SSC: ', dist[2])
+    print('\t\tAHF: ', dist[0])
+    print('\t\tCOM: ', dist[1])
+    print('\t\tSSC: ', dist[2])
+    print('\tadjusted with h:')
+    print('\t\tAHF: ', dist[0])
+    print('\t\tCOM: ', dist[1]*h_factor)
+    print('\t\tSSC: ', dist[2]*h_factor)
 
-    print('\n')
 
-    print('adjusted with h:')
-    print('AHF: ', dist[0])
-    print('COM: ', dist[1]*h_factor)
-    print('SSC: ', dist[2]*h_factor)
+print(f'h: {h_factor:.16f}')
