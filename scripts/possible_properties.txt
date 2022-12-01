@@ -1,0 +1,70 @@
+                          name |     handler     | property class
+-------------------------------+-----------------+-------------------------------------------------------------
+           BH_central_distance | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+             BH_central_offset | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+                       BH_mass | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+                               | EagleLikeInputH | tangos.properties.pynbody.eagle.EagleBH
+                       BH_mass | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+                               | EagleLikeInputH | tangos.properties.pynbody.eagle.EagleBH
+                       BH_mdot | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+                               | EagleLikeInputH | tangos.properties.pynbody.eagle.EagleBH
+                       BH_mdot | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+                               | EagleLikeInputH | tangos.properties.pynbody.eagle.EagleBH
+                   BH_mdot_ave | PynbodyInputHan | tangos.properties.pynbody.BH.BH
+             BH_mdot_histogram |   HandlerBase   | tangos.properties.pynbody.BH.BHAccHistogram
+         BH_mdot_histogram_all | PynbodyInputHan | tangos.properties.pynbody.BH.BHAccHistogramMerged
+                           NDM |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                          NGas |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                         NStar |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                    SFR_100Myr | PynbodyInputHan | tangos.properties.pynbody.SF.StarForm
+                     SFR_10Myr | PynbodyInputHan | tangos.properties.pynbody.SF.StarForm
+                 SFR_histogram | PynbodyInputHan | tangos.properties.pynbody.SF.StarFormHistogram
+                             a |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                            at |       live      | tangos.properties.live_profiles.AtPosition
+                            bh |       live      | tangos.properties.pynbody.BH.BHGal
+                      bhcenter |       live      | tangos.properties.pynbody.BH.BHCentral
+        contamination_fraction | PynbodyInputHan | tangos.properties.pynbody.zoom.Contamination
+                          dbid |       live      | tangos.properties.intrinsic.IntrinsicProperties
+            dm_density_profile | PynbodyInputHan | tangos.properties.pynbody.profile.HaloDensityProfile
+                               |  YtInputHandler | tangos.properties.yt.HaloDensityProfile
+            dm_density_profile | PynbodyInputHan | tangos.properties.pynbody.profile.HaloDensityProfile
+                               |  YtInputHandler | tangos.properties.yt.HaloDensityProfile
+               dm_mass_profile | PynbodyInputHan | tangos.properties.pynbody.profile.HaloDensityProfile
+                               |  YtInputHandler | tangos.properties.yt.HaloDensityProfile
+               dm_mass_profile | PynbodyInputHan | tangos.properties.pynbody.profile.HaloDensityProfile
+                               |  YtInputHandler | tangos.properties.yt.HaloDensityProfile
+                finder_dm_mass | PynbodyInputHan | tangos.properties.pynbody.mass.MassBreakdown
+               finder_gas_mass | PynbodyInputHan | tangos.properties.pynbody.mass.MassBreakdown
+                     finder_id |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                   finder_mass | PynbodyInputHan | tangos.properties.pynbody.mass.Masses
+              finder_star_mass | PynbodyInputHan | tangos.properties.pynbody.mass.MassBreakdown
+           gas_density_profile | PynbodyInputHan | tangos.properties.pynbody.profile.BaryonicHaloDensityProfile
+                       gas_map | PynbodyInputHan | tangos.properties.pynbody.images.BaryonicImages
+                gas_map_faceon | PynbodyInputHan | tangos.properties.pynbody.images.BaryonicImages
+                gas_map_sideon | PynbodyInputHan | tangos.properties.pynbody.images.BaryonicImages
+              gas_mass_profile | PynbodyInputHan | tangos.properties.pynbody.profile.BaryonicHaloDensityProfile
+                gas_max_radius | PynbodyInputHan | tangos.properties.pynbody.centring.CentreAndRadiusGas
+             gas_shrink_center | PynbodyInputHan | tangos.properties.pynbody.centring.CentreAndRadiusGas
+                   halo_number |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                           max |       live      | tangos.properties.live_profiles.MaxMinProperty
+                    max_radius | PynbodyInputHan | tangos.properties.pynbody.centring.CentreAndRadius
+           max_radius_comoving |       live      | tangos.properties.pynbody.centring.CentreAndRadiusComoving
+                      mean_rho | PynbodyInputHan | tangos.properties.pynbody.gas.MeanGasProperties
+                     mean_temp | PynbodyInputHan | tangos.properties.pynbody.gas.MeanGasProperties
+                           min |       live      | tangos.properties.live_profiles.MaxMinProperty
+                          path |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                        posmax |       live      | tangos.properties.live_profiles.MaxMinProperty
+                        posmin |       live      | tangos.properties.live_profiles.MaxMinProperty
+                 shrink_center | PynbodyInputHan | tangos.properties.pynbody.centring.CentreAndRadius
+        shrink_center_comoving |       live      | tangos.properties.pynbody.centring.CentreAndRadiusComoving
+          star_density_profile | PynbodyInputHan | tangos.properties.pynbody.profile.BaryonicHaloDensityProfile
+             star_mass_profile | PynbodyInputHan | tangos.properties.pynbody.profile.BaryonicHaloDensityProfile
+              stars_max_radius | PynbodyInputHan | tangos.properties.pynbody.centring.CentreAndRadiusStars
+           stars_shrink_center | PynbodyInputHan | tangos.properties.pynbody.centring.CentreAndRadiusStars
+                     step_path |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                             t |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                          type |       live      | tangos.properties.intrinsic.IntrinsicProperties
+                     uvi_image | PynbodyInputHan | tangos.properties.pynbody.images.BaryonicImages
+              uvi_image_faceon | PynbodyInputHan | tangos.properties.pynbody.images.BaryonicImages
+              uvi_image_sideon | PynbodyInputHan | tangos.properties.pynbody.images.BaryonicImages
+                             z |       live      | tangos.properties.intrinsic.IntrinsicProperties

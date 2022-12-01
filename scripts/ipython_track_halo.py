@@ -1,7 +1,8 @@
-import tangos as db
 import numpy as np
 
 import pandas as pd
+
+import tangos as db
 
 sim_name = 'h148.cosmo50PLKvdXsec.6144.VTS'
 sim = db.get_simulation(sim_name)
