@@ -13,7 +13,9 @@ class parentHalo(PropertyCalculation):
 
     def calculate(self, particle_data, halo):
 
+        #offsets = np.linalg.norm(np.array([halo['Xc'], halo['Yc'], halo['Zc']]) - self.centres, axis=1)
         offsets = np.linalg.norm(halo['shrink_center'] - self.centres, axis=1)
+        
         # print('self.centres length:', len(self.centres))
         # print('self.centres:', self.centres, '\n')
         # print('existing_properties["shrink_center"]:', existing_properties['shrink_center'],'\n')
@@ -31,13 +33,20 @@ class parentHalo(PropertyCalculation):
 
         # print('self.radii:', self.radii)
 
-        if np.any(inside_mask):            
-            return get_halo(self.dbid[self.radii[inside_mask].argmax()])
+        if np.any(inside_mask):      
+            # print('masked rmax:', self.radii[inside_mask])
+            
+            # print('dbid: ', self.dbid[self.radii[inside_mask].argmax()])
+            dbid_masked = self.dbid[inside_mask]
+            # print('masked dbid: ', dbid_masked[self.radii[inside_mask].argmax()])
+
+            return get_halo(dbid_masked[self.radii[inside_mask].argmax()]).halo_number()
         else:
             return -1
 
     def preloop(self, particle_data, timestep):
-        self.centres, self.radii, self.dbid = timestep.calculate_all("shrink_center","Rhalo","dbid()")
+        #self.xc, self.yc, self.zc , self.radii, self.dbid = timestep.calculate_all('Xc','Yc', 'Zc',"Rhalo","dbid()")
 
-        # print(type(existing_properties))
-        # print(type(existing_properties.halos[0]))
+        #self.centres = [self.xc, self.yc, self.zc]
+        
+        self.centres, self.radii, self.dbid = timestep.calculate_all('shrink_center',"max_radius","dbid()")

@@ -1,5 +1,5 @@
 import tangos as db
-import parentHalo
+# import parentHalo
 
 sim_name = 'h148.cosmo50PLKvdXsec.6144.VTS'
 sim = db.get_simulation(sim_name)
