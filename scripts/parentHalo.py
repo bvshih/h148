@@ -1,5 +1,6 @@
 from tangos.properties import PropertyCalculation
-from tangos import get_halo
+import tangos
+
 import numpy as np 
 
 class parentHalo(PropertyCalculation):
@@ -18,7 +19,7 @@ class parentHalo(PropertyCalculation):
         if np.any(inside_mask):                  
             dbid_masked = self.dbid[inside_mask]
 
-            return get_halo(dbid_masked[self.radii[inside_mask].argmax()]).halo_number()
+            return tangos.get_halo(dbid_masked[self.radii[inside_mask].argmax()]).halo_number()
         else:
             return -1
 
