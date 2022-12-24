@@ -1,4 +1,6 @@
 /batchjobs/script_outs/
+/SIMS/
 *.pyc
 *.pyo
 *.db-journal
+
