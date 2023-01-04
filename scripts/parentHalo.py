@@ -19,11 +19,9 @@ class parentHalo(PropertyCalculation):
         if np.any(inside_mask):                  
             dbid_masked = self.dbid[inside_mask]
 
-            return tangos.get_halo(dbid_masked[self.radii[inside_mask].argmax()]).halo_number()
+            return tangos.get_halo(dbid_masked[self.radii[inside_mask].argmax()])
         else:
-            return -1
+            return tangos.get_halo(halo)
 
     def preloop(self, particle_data, timestep):
-
-        
         self.centres, self.radii, self.dbid = timestep.calculate_all('shrink_center',"max_radius","dbid()")
